@@ -1,0 +1,18 @@
+﻿@page
+@model AspNetApplication.Pages.TeacherUI.TeacherProfileModel
+@{
+    ViewData["Title"] = "Учитель";
+}
+
+<h1>@Model.UserFirstName @Model.UserLastName</h1>
+
+<h3>Учитель</h3>
+
+<h4>Выставление оценок</h4>
+<form method="post">
+    <input placeholder="Имя студента" asp-for="StudentFirstName" />
+    <input placeholder="Фамилия студента" asp-for="StudentLastName" />
+    <input placeholder="Предмет" asp-for="SubjectName" />
+    <input placeholder="Оценка" asp-for="Grade"/>
+    <button>Подтвердить</button>
+</form>

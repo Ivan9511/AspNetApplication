@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Электронный дневник</h1>
+    <h3>Для просмотра содержимого требуется вход в систему.</h3>
+</div>
+
+<form asp-action="post" name="LoginForm">
+    <input placeholder="Login" asp-for="Login" />
+    <input placeholder="Password" asp-for="Password" type="password" />
+
+    <button type="submit">Войти</button>
+</form>

@@ -1,0 +1,39 @@
+﻿@page
+@model AspNetApplication.Pages.StudentUI.StudentProfileModel
+@{
+    ViewData["Title"] = "Студент";
+}
+<style>
+    td {
+        border: solid;
+        padding: 10px;
+    }
+</style>
+
+<h1>@Model.UserFirstName @Model.UserLastName</h1>
+
+<h3>Студент</h3>
+
+<h4>Расписание занятий</h4>
+
+
+    <table>
+        <tr>
+            <td>Предмет</td>
+            <td>Преподаватель</td>
+            <td>День недели</td>
+            <td>Время начала</td>
+            <td>Время завершения</td>
+        </tr>
+        @foreach (var schedule in Model.ScheduleCollection)
+        {
+            <tr>
+                <td>@schedule.subject_name</td>
+                <td>@schedule.teacher_name</td>
+                <td>@schedule.day_week</td>
+                <td>@schedule.started_time</td>
+                <td>@schedule.ending_time</td>
+            </tr>
+        }
+    </table>
+   

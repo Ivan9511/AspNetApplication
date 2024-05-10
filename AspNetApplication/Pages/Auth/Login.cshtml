@@ -1,0 +1,11 @@
+﻿@page
+@model AspNetApplication.Pages.Auth.LoginModel
+@{
+}
+
+<form asp-action="post" name="LoginForm">
+    <input placeholder="Login" asp-for="Login" />
+    <input placeholder="Password" asp-for="Password" />
+
+    <button type="submit">Войти</button>
+</form>
